@@ -24,7 +24,7 @@ int main(){
   }
   else{
     cv::imshow("窗口名", img);
-    cv::waitKay(0);
+    cv::waitKey(0);
   }
   return 0;
 }
