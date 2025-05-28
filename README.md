@@ -16,7 +16,7 @@ Debug和Release需要在属性的左上角配置处切换（vs2022为例）
 ```c++
 #include<iostream>
 #include<opencv2/opencv.hpp>
-using namespace atd;
+using namespace std;
 int main(){
   cv::Mat img = cv::imread("图片的路径");
   if(img.empty()){
