@@ -3,7 +3,7 @@
 ## 1.环境搭建
 1. 下载Windows版的[OpenCV](https://opencv.org/releases/)，类似如图![](https://github.com/heng-jack/OpenCV-Cpp_superficial_learning/blob/main/image.png)
 2. 下载后得到如下文件，双击打开，选择合适的路径解压文件到此路径
-3. 在vs中配置，步骤如下
+3. 在vs中配置，先创建一个项目，步骤如下
 ```
 项目——***和属性
 1. C/C++——常规——附加包含路径  添加：解压路径\opencv\build\include
@@ -12,3 +12,21 @@
 注意：1和2是Debug和Release都要设置，而3  Debug 添加opencv_worldxxx.lib，Release添加opencv_worldxxxd.lib
 Debug和Release需要在属性的左上角配置处切换（vs2022为例）
 ```
+4. 就可以进行测试了，测试代码如下
+```c++
+#include<iostream>
+#include<opencv2/opencv.hpp>
+using namespace atd;
+int main(){
+  cv::Mat img = cv::imread("图片的路径");
+  if(img.empty()){
+    cout << "读入为空" << endl;
+  }
+  else{
+    cv::imshow("窗口名", img);
+    cv::waitKay(0);
+  }
+  return 0;
+}
+```
+如果能够创建出一个窗口，并显示你的图片，就说明安装配置成功
