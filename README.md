@@ -32,7 +32,8 @@ int main(){
 如果能够创建出一个窗口，并显示你的图片，就说明安装配置成功
 
 ## 2.常用函数
-|函数名|功能|
-|-|-|
-|show("window's name", img)|创建窗口展示图片|
-
+|函数名|功能|备注|
+|-|-|-|
+|show("window's name", img)|创建窗口展示图片||
+|waitkey(int delay = 0)|等待用户按键输入|delay以毫秒为单位，默认值为零，返回的是一般字母的ASCII码，特殊的：<Esc> = 27等等|
+|destroyWindow(const string& winname)|根据窗口名称关闭窗口|参数winname为窗口名称|
